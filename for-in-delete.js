@@ -19,9 +19,9 @@
 //   five: ' values.'
 // } 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  concatValues = ''
+  for (let prop in obj) {
+    concatValues += obj[prop]
+  }
+  return concatValues
 }
 
 
@@ -54,6 +58,12 @@ function showValues( obj ) {
 */
 
 //Code Here
+function greaterThan10 (obj) {
+  for (let prop in obj) {
+    obj[prop] > 10 ? obj[prop] = 0 : obj[prop]
+  }
+  return obj
+}
 
 
 
